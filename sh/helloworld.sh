@@ -31,7 +31,8 @@ echo $list_header
 
 # Sort filters
 #	Credits:	https://stackoverflow.com/questions/14562423/is-there-a-way-to-ignore-header-lines-in-a-unix-sort
-for s in /contrib/xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > "/contrib/sorted_${s}"; done
+pwd
+#for s in /contrib/xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > "/contrib/sorted_${s}"; done
 
 #	Make ABP eXperimental Files (and clean)!
 #	Credits:	https://kb.iu.edu/d/afas
