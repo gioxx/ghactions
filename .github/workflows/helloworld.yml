@@ -52,5 +52,10 @@ jobs:
           ! Hosting: GitHub.com\n
           !"
 
-          echo "Debug List Header:"
-          echo $list_header
+        - name: Update files on GitHub
+          uses: test-room-7/action-update-file@v1.5.0
+          with:
+            # Include all JS files from the `dist` directory
+            file-path: experimental.txt
+            commit-msg: "Experimental $update del $lastmodified"
+            github-token: ${{ secrets.GHUB_TOKEN }}
