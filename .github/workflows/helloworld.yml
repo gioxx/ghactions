@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Initialize
+      - name: Hello World!
         run: sh ./sh/helloworld.sh
 
       - name: Make eXperimental!
@@ -30,10 +30,11 @@ jobs:
           echo "! Blog: https://gioxx.org/tag/abpxfiles" >> experimental.txt
           echo "! Hosting: GitHub.com" >> experimental.txt
           echo "!" >> experimental.txt
+          commit-msg="Experimental" $update "del" $lastmodified
 
       - name: Update files on GitHub
         uses: test-room-7/action-update-file@v1.5.0
         with:
           file-path: experimental.txt
-          commit-msg: "Experimental" $update "del" $lastmodified
+          commit-msg: $commit-msg
           github-token: ${{ secrets.GHUB_TOKEN }}
