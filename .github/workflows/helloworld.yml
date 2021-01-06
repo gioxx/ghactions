@@ -1,61 +1,27 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
-
-# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Make eXperimental!
-        #run: sh ./sh/helloworld.sh
-        run: |
-          giorno=$(date +%d)
-          mese=$(date +%m)
-          anno=$(date +%Y)
-          ora=$(date +%H)
-          minuto=$(date +%M)
-          update=$anno$mese$giorno$ora$minuto
-          lastmodified=$giorno"-"$mese"-"$anno
-
-          echo "Debug Update:        " $update
-          echo "Debug Last Modified: " $lastmodified
-
-          list_header="[Adblock Plus 2.8]\n
-          ! Version: '$update\n
-          ! Title: ABP eXperimental Files: the unstable list\n
-          ! Fork sperimentale di X Files, si consiglia di usare la lista Stable!\n
-          ! Last modified: '$lastmodified\n
-          ! Expires: 2 days\n
-          ! Homepage: https://xfiles.noads.it\n
-          ! Home: https://xfiles.noads.it\n
-          ! Blog: https://gioxx.org/tag/abpxfiles\n
-          ! Hosting: GitHub.com\n
-          !"
+        run: sh ./sh/helloworld.sh
+        #run: |
+        #  echo "Hello World!"
 
         - name: Update files on GitHub
-          uses: test-room-7/action-update-file@v1.5.0
+        - uses: test-room-7/action-update-file@v1.5.0
           with:
-            # Include all JS files from the `dist` directory
             file-path: experimental.txt
             commit-msg: "Experimental $update del $lastmodified"
             github-token: ${{ secrets.GHUB_TOKEN }}
