@@ -5,8 +5,8 @@ ora=$(date +%H)
 minuto=$(date +%M)
 update=$anno$mese$giorno$ora$minuto
 lastmodified=$giorno"-"$mese"-"$anno
-echo "::set-env name=UPDATE::$update"
-echo "::set-env name=LASTMODIFIED::$lastmodified"
+echo "{update}={$update}" >> $GITHUB_ENV
+echo "{lastmodified}={$lastmodified}" >> $GITHUB_ENV
 
 list_header="[Adblock Plus 2.8]\n
 ! Version: '$update\n
@@ -19,7 +19,7 @@ list_header="[Adblock Plus 2.8]\n
 ! Blog: https://gioxx.org/tag/abpxfiles\n
 ! Hosting: GitHub.com\n
 !"
-echo "::set-env name=LIST_HEADER::$list_header"
+echo "{list_header}={$list_header}" >> $GITHUB_ENV
 
 #cd contrib
 #for s in xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > sorted_${s}; done
