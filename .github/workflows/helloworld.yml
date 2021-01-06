@@ -30,11 +30,11 @@ jobs:
           echo "! Blog: https://gioxx.org/tag/abpxfiles" >> experimental.txt
           echo "! Hosting: GitHub.com" >> experimental.txt
           echo "!" >> experimental.txt
-          commitmessage="Experimental ${update} del ${lastmodified}"
 
       - name: Update files on GitHub
-        uses: test-room-7/action-update-file@v1.5.0
-        with:
-          file-path: experimental.txt
-          commit-msg: $commitmessage
-          github-token: ${{ secrets.GHUB_TOKEN }}
+        run: |
+          git add experimental.txt
+          git commit -m "Experimental $update del $lastmodified"
+          git push
+
+        #github-token: ${{ secrets.GHUB_TOKEN }}
