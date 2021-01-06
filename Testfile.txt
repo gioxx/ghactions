@@ -1,0 +1,1 @@
+File di test per verificare che il workflow non parta automaticamente.
