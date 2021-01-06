@@ -7,7 +7,6 @@ update=$anno$mese$giorno$ora$minuto
 lastmodified=$giorno"-"$mese"-"$anno
 echo "{update}={$update}" >> $GITHUB_ENV
 echo "{lastmodified}={$lastmodified}" >> $GITHUB_ENV
-echo "{list_header}={$list_header}" >> $GITHUB_ENV
 
 #cd contrib
 #for s in xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > sorted_${s}; done
