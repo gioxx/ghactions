@@ -1,5 +1,5 @@
 [Adblock Plus 2.8]
-! Version: 202101061424
+! Version: 202101061426
 ! Title: ABP eXperimental Files: the unstable list
 ! Fork sperimentale di X Files, si consiglia di usare la lista Stable!
 ! Last modified: 06-01-2021
@@ -4891,6 +4891,7 @@ windows8blog.it##.cmampos2-content-widget
 wowcast.tv###video_ads_overdiv
 xboxdvr.com##.ad-container
 xboxdvr.com##[class^="ad-container"]
+xboxdvr.com##[id^="ox_"][width="300"][height="250"]
 ||32red.it^$popup
 ||50.7.128.74^
 ||a2pub.com^$domain=junkyvideo.com
