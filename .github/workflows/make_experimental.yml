@@ -1,5 +1,8 @@
 name: ABP eXperimental Files
 on:
+  push:
+    paths:
+    - 'contrib/xfiles_*'
 #  push:
 #    branches: [ master ]
 #  pull_request:
