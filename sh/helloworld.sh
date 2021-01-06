@@ -19,7 +19,9 @@ echo "! Home: https://xfiles.noads.it" >> list_header.txt
 echo "! Blog: https://gioxx.org/tag/abpxfiles" >> list_header.txt
 echo "! Hosting: GitHub.com" >> list_header.txt
 echo "!" >> list_header.txt
-list_header=$(<list_header.txt)
+
+cat list_header.txt
+
 echo "{list_header}={$list_header}" >> $GITHUB_ENV
 
 #cd contrib
