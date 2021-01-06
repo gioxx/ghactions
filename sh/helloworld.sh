@@ -40,7 +40,7 @@ for s in xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > sorted_${
 #						https://stackoverflow.com/questions/8183191/concatenating-files-and-insert-new-line-in-between-files
 #						https://unix.stackexchange.com/questions/126998/getting-the-line-count-and-storing-in-a-result-set
 #						https://unix.stackexchange.com/questions/232384/argument-string-to-integer-in-bash/232386
-#	echo "$list_header" > ../experimental.txt
+echo "$list_header" > experimental.txt
 #	for f in sorted_*; do (cat "${f}") >> ../experimental.txt; done
 #	rm sorted_*
 
