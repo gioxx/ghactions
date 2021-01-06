@@ -1,8 +1,8 @@
 [Adblock Plus 2.8]
-! Version: 
+! Version:  env:{}
 ! Title: ABP eXperimental Files: the unstable list
 ! Fork sperimentale di X Files, si consiglia di usare la lista Stable!
-! Last modified: 
+! Last modified:  env:{}
 ! Expires: 2 days
 ! Homepage: https://xfiles.noads.it
 ! Home: https://xfiles.noads.it
