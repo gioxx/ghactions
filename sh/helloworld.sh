@@ -8,17 +8,18 @@ lastmodified=$giorno"-"$mese"-"$anno
 echo "{update}={$update}" >> $GITHUB_ENV
 echo "{lastmodified}={$lastmodified}" >> $GITHUB_ENV
 
-list_header="[Adblock Plus 2.8]\n
-! Version: '$update\n
-! Title: ABP eXperimental Files: the unstable list\n
-! Fork sperimentale di X Files, si consiglia di usare la lista Stable!\n
-! Last modified: '$lastmodified\n
-! Expires: 2 days\n
-! Homepage: https://xfiles.noads.it\n
-! Home: https://xfiles.noads.it\n
-! Blog: https://gioxx.org/tag/abpxfiles\n
-! Hosting: GitHub.com\n
-!"
+echo "[Adblock Plus 2.8]" > list_header.txt
+echo "! Version: '$update" >> list_header.txt
+echo "! Title: ABP eXperimental Files: the unstable list" >> list_header.txt
+echo "! Fork sperimentale di X Files, si consiglia di usare la lista Stable!" >> list_header.txt
+echo "! Last modified: '$lastmodified" >> list_header.txt
+echo "! Expires: 2 days" >> list_header.txt
+echo "! Homepage: https://xfiles.noads.it" >> list_header.txt
+echo "! Home: https://xfiles.noads.it" >> list_header.txt
+echo "! Blog: https://gioxx.org/tag/abpxfiles" >> list_header.txt
+echo "! Hosting: GitHub.com" >> list_header.txt
+echo "!" >> list_header.txt
+list_header=$(<list_header.txt)
 echo "{list_header}={$list_header}" >> $GITHUB_ENV
 
 #cd contrib
