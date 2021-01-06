@@ -15,10 +15,12 @@
 #	List Header
 #	Credits:	https://unix.stackexchange.com/questions/20035/how-to-add-newlines-into-variables-in-bash-script
 	NL=$'\n'
-	list_header="[Adblock Plus 2.8]${NL}
-	! Version: '$update${NL}"
+	list_header="[Adblock Plus 2.8]\n
+	! Version: '$update\n
+	! Title: ABP eXperimental Files: the unstable list\n"
 
-	echo "Debug List Header:			" $list_header
+	echo "Debug List Header:"
+	echo $list_header
 
 #	list_header+='! Version: '$update${NL}
 #	list_header+='! Title: ABP eXperimental Files: the unstable list${NL}'
