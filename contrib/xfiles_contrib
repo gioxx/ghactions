@@ -359,3 +359,4 @@ windows8blog.it##.cmampos2-content-widget
 wowcast.tv###video_ads_overdiv
 xboxdvr.com##.ad-container
 xboxdvr.com##[class^="ad-container"]
+xboxdvr.com##[id^="ox_"][width="300"][height="250"]
