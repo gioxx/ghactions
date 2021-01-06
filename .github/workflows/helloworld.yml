@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -27,4 +27,30 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Make eXperimental!
-        run: sh ./sh/helloworld.sh
+        #run: sh ./sh/helloworld.sh
+        run: |
+          giorno=$(date +%d)
+          mese=$(date +%m)
+          anno=$(date +%Y)
+          ora=$(date +%H)
+          minuto=$(date +%M)
+          update=$anno$mese$giorno$ora$minuto
+          lastmodified=$giorno"-"$mese"-"$anno
+
+          echo "Debug Update:        " $update
+          echo "Debug Last Modified: " $lastmodified
+
+          list_header="[Adblock Plus 2.8]\n
+          ! Version: '$update\n
+          ! Title: ABP eXperimental Files: the unstable list\n
+          ! Fork sperimentale di X Files, si consiglia di usare la lista Stable!\n
+          ! Last modified: '$lastmodified\n
+          ! Expires: 2 days\n
+          ! Homepage: https://xfiles.noads.it\n
+          ! Home: https://xfiles.noads.it\n
+          ! Blog: https://gioxx.org/tag/abpxfiles\n
+          ! Hosting: GitHub.com\n
+          !"
+
+          echo "Debug List Header:"
+          echo $list_header
