@@ -31,10 +31,14 @@ jobs:
           echo "! Hosting: GitHub.com" >> experimental.txt
           echo "!" >> experimental.txt
 
-      - name: Update files on GitHub
+      - name: Commit files
         run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add experimental.txt
-          git commit -m "Experimental $update del $lastmodified"
-          git push
-
-        #github-token: ${{ secrets.GHUB_TOKEN }}
+          git commit -m "Experimental $update del $lastmodified" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GHUB_TOKEN }}
+          branch: ${{ github.ref }}
