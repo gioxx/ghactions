@@ -18,11 +18,11 @@ jobs:
         run: sh ./sh/helloworld.sh
 
       - name: Create/update text file
-        run: echo $list_header > experimental.txt
+        run: echo $LIST_HEADER > experimental.txt
 
       - name: Update files on GitHub
         uses: test-room-7/action-update-file@v1.5.0
         with:
           file-path: experimental.txt
-          commit-msg: "Experimental $update del $lastmodified"
+          commit-msg: "Experimental $UPDATE del $LASTMODIFIED"
           github-token: ${{ secrets.GHUB_TOKEN }}
