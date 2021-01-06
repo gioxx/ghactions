@@ -17,6 +17,9 @@ jobs:
       - name: Make eXperimental!
         run: sh ./sh/helloworld.sh
 
+      - name: Create/update text file
+        run: echo $list_header > experimental.txt
+
       - name: Update files on GitHub
         uses: test-room-7/action-update-file@v1.5.0
         with:

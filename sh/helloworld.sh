@@ -22,11 +22,8 @@ list_header="[Adblock Plus 2.8]\n
 echo "Debug List Header:"
 echo $list_header
 
-cd contrib
-for s in xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > sorted_${s}; done
-
-echo "$list_header" > experimental.txt
-#	for f in sorted_*; do (cat "${f}") >> ../experimental.txt; done
-#	rm sorted_*
+#cd contrib
+#for s in xfiles_*; do (head -n 1 "${s}" && tail -n +2 "${s}" | sort) > sorted_${s}; done
+#	for f in sorted_*; do (cat "${f}") >> experimental.txt; done
 
 exit
