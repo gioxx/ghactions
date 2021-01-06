@@ -17,7 +17,9 @@
 	NL=$'\n'
 	list_header="[Adblock Plus 2.8]${NL}
 	! Version: '$update${NL}"
-	
+
+	echo "Debug List Header:			" $list_header
+
 #	list_header+='! Version: '$update${NL}
 #	list_header+='! Title: ABP eXperimental Files: the unstable list${NL}'
 #	list_header+='! Fork sperimentale di X Files, si consiglia di usare la lista Stable!${NL}'
