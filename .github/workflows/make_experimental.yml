@@ -31,10 +31,10 @@ jobs:
           echo "! Hosting: GitHub.com" >> experimental.txt
           echo "!" >> experimental.txt
 
-      - name: All ready on the launching pad
+      - name: The rocket is ready to be launched
         run: sh ./sh/make_experimental.sh
 
-      - name: The rocket is ready to be launched: commit experimental.txt
+      - name: Commit
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "ABPXFilesBot[bot]"
