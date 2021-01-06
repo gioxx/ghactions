@@ -8,7 +8,7 @@ Ho quindi portato in questo repository di test i file necessari alla creazione d
 
 A quel punto lancio un commit che va a pubblicare per tutti la nuova `experimental.txt`.
 
-Il workflow parte solo se un'azione di push ha riguardato uno dei file `xfiles_` è stato aggiornato nella cartella `contrib`.
+Il workflow parte solo se un'azione di push ha riguardato uno dei file `xfiles_` presenti nella cartella `contrib`.
 
 ------
 
