@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Hello World!
+      - name: Start engine
         run: sh ./sh/datetime.sh
 
-      - name: Make eXperimental!
+      - name: Prepare list header
         run: |
           echo "[Adblock Plus 2.8]" > experimental.txt
           echo "! Version:" $update >> experimental.txt
@@ -31,10 +31,13 @@ jobs:
           echo "! Hosting: GitHub.com" >> experimental.txt
           echo "!" >> experimental.txt
 
-      - name: Commit files
+      - name: All ready on the launching pad
+        run: sh ./sh/make_experimental.sh
+
+      - name: The rocket is ready to be launched: commit experimental.txt
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.name "ABPXFilesBot[bot]"
           git add experimental.txt
           git commit -m "Experimental $update del $lastmodified" -a
       - name: Push changes
