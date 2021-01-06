@@ -20,10 +20,10 @@ jobs:
       - name: Make eXperimental!
         run: |
           echo "[Adblock Plus 2.8]" > experimental.txt
-          echo "! Version: "${{GITHUB_ENV.update}} >> experimental.txt
+          echo "! Version: "${{ENV.update}} >> experimental.txt
           echo "! Title: ABP eXperimental Files: the unstable list" >> experimental.txt
           echo "! Fork sperimentale di X Files, si consiglia di usare la lista Stable!" >> experimental.txt
-          echo "! Last modified: "${{GITHUB_ENV.lastmodified}} >> experimental.txt
+          echo "! Last modified: "${{ENV.lastmodified}} >> experimental.txt
           echo "! Expires: 2 days" >> experimental.txt
           echo "! Homepage: https://xfiles.noads.it" >> experimental.txt
           echo "! Home: https://xfiles.noads.it" >> experimental.txt
