@@ -14,8 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Make eXperimental
+      - name: Initialize
         run: sh ./sh/helloworld.sh
+
+      - name: Make eXperimental!
         run: |
           echo "[Adblock Plus 2.8]" > experimental.txt
           echo "! Version: "$update >> experimental.txt
