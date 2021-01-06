@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hello World!
-        run: sh ./sh/helloworld.sh
+        run: sh ./sh/datetime.sh
 
       - name: Make eXperimental!
         run: |
