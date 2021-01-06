@@ -16,22 +16,19 @@
 #	Credits:	https://unix.stackexchange.com/questions/20035/how-to-add-newlines-into-variables-in-bash-script
 	NL=$'\n'
 	list_header="[Adblock Plus 2.8]\n
-	! Version: '$update\n
-	! Title: ABP eXperimental Files: the unstable list\n"
+! Version: '$update\n
+! Title: ABP eXperimental Files: the unstable list\n
+! Fork sperimentale di X Files, si consiglia di usare la lista Stable!\n
+! Last modified: '$lastmodified\n
+! Expires: 2 days\n
+! Homepage: https://xfiles.noads.it\n
+! Home: https://xfiles.noads.it\n
+! Blog: https://gioxx.org/tag/abpxfiles\n
+! Hosting: GitHub.com\n
+!"
 
 	echo "Debug List Header:"
 	echo $list_header
-
-#	list_header+='! Version: '$update${NL}
-#	list_header+='! Title: ABP eXperimental Files: the unstable list${NL}'
-#	list_header+='! Fork sperimentale di X Files, si consiglia di usare la lista Stable!${NL}'
-#	list_header+='! Last modified: '$lastmodified${NL}
-#	list_header+='! Expires: 2 days${NL}'
-#	list_header+='! Homepage: https://xfiles.noads.it${NL}'
-#	list_header+='! Home: https://xfiles.noads.it${NL}'
-#	list_header+='! Blog: https://gioxx.org/tag/abpxfiles${NL}'
-#	list_header+='! Hosting: GitHub.com${NL}'
-#	list_header+='!'
 
 # Sort filters
 #	Credits:	https://stackoverflow.com/questions/14562423/is-there-a-way-to-ignore-header-lines-in-a-unix-sort
